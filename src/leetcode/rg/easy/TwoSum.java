@@ -17,7 +17,7 @@ public class TwoSum {
         }
         throw new IllegalArgumentException("No match found");
     }
-    
+
     public int[] twoSumBruteforce(int[] nums, int target) {
 
         for(int i = 0; i < nums.length; i++){
