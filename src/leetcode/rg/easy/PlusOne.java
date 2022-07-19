@@ -12,20 +12,18 @@ public class PlusOne {
      */
     public static int[] plusOne(int[] digits) {
 
-        int[] arr = new int[digits.length+1];
         digits[digits.length-1]++;
         for(int i = digits.length-1; i >= 0; i--){
-            arr[i+1] = digits[i];
             if(digits[i] == 10){
-                arr[i+1] = digits[i] = 0;
+                digits[i] = 0;
                 if(i-1 < 0){
+                    int[] arr = new int[digits.length+1];
                     arr[0] = 1;
                     return arr;
                 }
-                digits[i -1]++;
+                digits[i-1]++;
             }
         }
-
         return digits;
     }
 }
